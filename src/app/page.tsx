@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Zap, BarChart3, Layout, ChevronDown } from "lucide-react";
+import { formatIDR } from "@/utils/format";
 
 export default function Home() {
   return (
@@ -189,7 +190,7 @@ export default function Home() {
             {/* Competitor Card */}
             <div className="p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/20 opacity-70 scale-95">
               <h3 className="text-xl font-semibold mb-2">The "Other" Guys</h3>
-              <div className="text-3xl font-bold text-zinc-500 mb-6">~$72<span className="text-lg font-normal text-zinc-400">/year</span></div>
+              <div className="text-3xl font-bold text-zinc-500 mb-6">{formatIDR(1100000)}<span className="text-lg font-normal text-zinc-400">/year</span></div>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-zinc-500">
                   <Check className="w-5 h-5 mr-3" /> Monthly recurring fees
@@ -213,7 +214,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Lifetime Access</h3>
               <div className="flex items-baseline mb-6">
-                <span className="text-5xl font-extrabold tracking-tight">$29</span>
+                <span className="text-4xl font-extrabold tracking-tight">{formatIDR(450000)}</span>
                 <span className="ml-2 text-xl font-medium text-zinc-500 dark:text-zinc-400">one-time</span>
               </div>
               <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-8">
@@ -239,7 +240,7 @@ export default function Home() {
                 href="/register"
                 className="w-full block text-center py-4 rounded-full bg-black text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-bold text-lg transition-all"
               >
-                Get Included For $29
+                Get Included For {formatIDR(450000)}
               </Link>
               <p className="text-center text-xs text-zinc-400 mt-4">
                 30-day money-back guarantee
